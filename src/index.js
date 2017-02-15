@@ -23,27 +23,28 @@ var Card = require('./components/Card')
 // END OF STUFF TO NOT MODIFY
 
 var App = React.createClass({
+  getInitialState: function(){
+       return {cards: getDeck};
+     },
   render: function() {
     return (
       <div>
         <h1>Welcome to the KIEI-924 Casino!</h1>
         <div className="row">
           <div className="col-sm-2">
-            <h1><a onClick={this.Deal} className="btn btn-success">Deal</a></h1>
-              <Card card={this.state.hand[0]} />
-              <Card card={this.state.hand[1]} />
-              <Card card={this.state.hand[2]} />
-              <Card card={this.state.hand[3]} />
-              <Card card={this.state.hand[4]} />
+            <h1><a href="#" className="btn btn-success">Deal</a></h1>
+            </div>
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+              <Card />
           </div>
         </div>
-      </div>
-    )
-  }
-})
 
-getInitialState: function() {
-  return { hand: ["ace_of_hearts", "ace_of_diamonds", "queen_of_hearts", "queen_of_spades", "queen_of_clubs"]  }
-}
+      )
+    }
+  })
+
 
 ReactDOM.render(<App />, document.getElementById("app"))

@@ -1,17 +1,13 @@
 var React = require('react')
 
 var Card = React.createClass({
-
-  render: function(Card) {
-    return (
-      <div className="row">
-        <div className="col-sm-2">
-          <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + this.props.Card + ".png"} /></h1>
-          </div>
-        </div>
-    )
-  }
-
+ render: function() {
+   return (
+     <div className="col-sm-2">
+       <h1><img className="img-responsive" src={"http://golearntocode.com/images/cards/" + "ace_of_hearts" + ".png"} /></h1>
+     </div>
+     )
+ }
 })
 
 module.exports = Card
